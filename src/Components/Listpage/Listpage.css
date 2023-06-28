@@ -1,0 +1,115 @@
+.Filter-DOM{
+    display: flex;
+    max-width: 1600px;
+    margin: auto;
+    min-height: calc(100vh - 100px);
+}
+.side-bar{
+    width: 30%;
+    max-width: 270px;
+    margin: 8px;
+    height: max-content;
+    position: sticky;
+    top: 63px;
+    background: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
+}
+.product-list-page{
+    flex: 1;
+    background: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
+    margin: 8px;
+    margin-right: 23px;
+    margin-left: 0px;
+    padding-bottom: 40px;
+    display: grid;
+    place-items: center;
+}
+.fliter-boxes .filter-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-head h4{
+    font-size: 18px;
+    /* font-weight: 500; */
+}
+.filter-head span{
+    cursor: pointer;
+    color: #2874f0;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.Price-filter, .brand-filter, .ratings-filter, .fliter-boxes{
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.Price-filter h5, .brand-filter h5, .ratings-filter h5{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.brand-box{
+    display: flex;
+    align-items: center;
+}
+.brand-box span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.Filters-List{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.Filters-List span{
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 4px 0 hsla(0,0%,100%,.5);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    overflow: hidden;
+    transition: background-color .1s;
+    max-width: 200px;
+    padding: 8px;  
+}
+.Filters-List span em{
+    margin-right: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none !important;
+    font-style: normal !important;
+}
+.Filters-List span:hover{
+    text-decoration: line-through;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.product-card{
+    max-width: 290px;
+    margin: 20px 5px;
+    box-shadow: none !important;
+    border: 2px solid #f2f2f2;
+    background: #fff !important;
+}
+.product-card:hover{
+    box-shadow: 0 3px 16px 0 rgba(0,0,0,.11) !important;
+    background: none !important;
+    background-color: #fff !important;
+}
+.product-card-media{
+    width: 200px;
+    height: 180px;
+    object-fit: contain !important;
+    margin: 40px auto;
+}
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+    color: #fff;
+    background-color: #2874f0 !important;
+}
