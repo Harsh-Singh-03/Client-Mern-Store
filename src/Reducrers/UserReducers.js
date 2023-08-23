@@ -59,7 +59,7 @@ export const SigninReducer = (state = { data: {}, loading: false, SignInSuccess:
           return state;
       }
 }
-export const UserTokenReducer = (state = { UserData: {}, isLoggedIn: false, loading: false  }, action) => {
+export const UserTokenReducer = (state = { UserData: {}, isLoggedIn: false, loading: true  }, action) => {
     switch (action.type) {
         case USER_TOKEN_VERIFY_REQ:
           return {

@@ -58,7 +58,7 @@ const ShippingDetail = () => {
     }
     else {
       let storeAdd = Address
-      storeAdd.default = SaveDefault
+      storeAdd.isDefault = SaveDefault
       Dispatch(CheckoutProcess("PROCESS_PAYMENT"))
       Dispatch(addUserAddress(storeAdd))
     }

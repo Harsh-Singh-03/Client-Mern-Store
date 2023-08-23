@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleAuthDisplay } from '../../Actions/UserAction';
 import ProfileBtn from './ProfileBtn';
 import { ToggleCartPage } from '../../Actions/CartAction';
+import { useAlert } from 'react-alert';
 
 const LoginButton = styled(Button)`
   background: #fff;
@@ -38,6 +39,7 @@ const Carticon = styled(ShoppingCartIcon)`
 
 const Buttons = () => {
   const Dispatch = useDispatch()
+  const AlertMessage = useAlert()
   const { isLoggedIn, loading } = useSelector((state) => state.TokenVerify);
 
   const ToggleFormDisplay = () => {
@@ -57,8 +59,8 @@ const Buttons = () => {
         <LoginButton variant="contained" onClick={ToggleFormDisplay}>Login</LoginButton> :
         <ProfileBtn/>
       }
-      <Typography style={{ minWidth: "max-content" }}>Become a Seller</Typography>
-      <Typography>More</Typography>
+      <Typography style={{ minWidth: "max-content",cursor: "pointer" }} onClick={()=>AlertMessage.info("Coming Soon !")}>Become a Seller</Typography>
+      <Typography onClick={()=>AlertMessage.info("Coming Soon !")} style={{cursor: "pointer"}}>More</Typography>
       <Box style={{ display: "flex", alignItems: "center", cursor: "pointer"  }} onClick={showPopUp} >
         <Typography>
           <Carticon />

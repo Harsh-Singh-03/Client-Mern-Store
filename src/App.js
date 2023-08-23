@@ -11,6 +11,7 @@ import { TokenVerify } from './Actions/UserAction';
 import Cart from './Components/Cart/Cart';
 import Shipping from './Components/Checkout/Shipping';
 import Thankyou from './Components/Checkout/Thankyou';
+import Profile from './Components/User/Profile';
 
 function App() {
   
@@ -48,6 +49,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/checkout/:id" element={<Shipping />} />
             <Route path="/checkout/thank-you/:id" element={<Thankyou />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Box>
       </Router>
