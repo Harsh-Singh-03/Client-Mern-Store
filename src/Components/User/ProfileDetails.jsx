@@ -30,7 +30,7 @@ const ProfileDetails = () => {
     
   return (
     <div className='profile-details'>
-        {isLoggedIn === true &&
+    {isLoggedIn === true &&
         <>
             <div className="topGrid">
                 <Card className='card-details'>
@@ -52,7 +52,7 @@ const ProfileDetails = () => {
             <div className="recentProduct">
                 <h1 style={{marginBottom: 40}}>Recently Viewed Products</h1>
                 <div className='recent-list'>
-                    {product.map((data, index) => {
+                    {product > 0 ? product.map((data, index) => {
                         return (
                             <Link to={`/product/${data._id}`} className='product-box' key={index} style={{textDecoration: "none", textAlign: "center"}} >
                                 <img src={data.images[0].url} alt="product"/>
@@ -61,7 +61,7 @@ const ProfileDetails = () => {
                                 <p className="brand">{data.brand}</p>
                             </Link>
                         )
-                    })}       
+                    }): <></>}       
                 </div>
             </div>
          </>
