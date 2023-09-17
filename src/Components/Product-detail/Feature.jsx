@@ -26,15 +26,11 @@ const Feature = () => {
   useEffect(() => {
    if(isProduct === true){
     dispatch(GetAllReviews({productID: id}))
+    console.log(product)
    }
    // eslint-disable-next-line
   }, [isProduct])
 
-  // useEffect(() => {
-  //   console.log(loading)
-  //   console.log(Reviews)
-  //   // eslint-disable-next-line
-  // }, [loading])
 
   useEffect(() => {
     if(isReviewSuccess === true){
@@ -126,11 +122,21 @@ const Feature = () => {
      }
   }
   return (
-    <div>
-      <button onClick={addNew}>Add a review</button>
-      <button onClick={DeleteNew}>Delete review</button>
-      <button onClick={updateRev}>Update review</button>
-      <button onClick={addCart}>Cart</button>
+    <div className="product-details">
+      {isProduct === true && (
+        <>
+          <h4>{product.data.name}</h4>
+          <div className="d-flex">
+            <span style={{color: "#2874f0", display: "inline"}}>{product.data.brand}</span>
+            <span style={{color: "red",display: "inline"}}>#{product.data.category}</span>
+          </div>
+          
+          <button onClick={addNew}>Add a review</button>
+          <button onClick={DeleteNew}>Delete review</button>
+          <button onClick={updateRev}>Update review</button>
+          <button onClick={addCart}>Cart</button>
+        </>
+      )}
     </div>
   )
 }

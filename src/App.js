@@ -12,6 +12,9 @@ import Cart from './Components/Cart/Cart';
 import Shipping from './Components/Checkout/Shipping';
 import Thankyou from './Components/Checkout/Thankyou';
 import Profile from './Components/User/Profile';
+import VerifyEmail from './Components/User/VerifyEmail';
+import Reset from './Components/Authentications/Reset';
+import OrderInfo from './Components/User/OrderInfo';
 
 function App() {
   
@@ -50,6 +53,9 @@ function App() {
             <Route path="/checkout/:id" element={<Shipping />} />
             <Route path="/checkout/thank-you/:id" element={<Thankyou />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/verify-email/:id/:token" element={<VerifyEmail />} />
+            <Route path="/reset-pass/:id/:token" element={<Reset />} />
+            <Route path="/profile/order/:id" element={<OrderInfo />} />
           </Routes>
         </Box>
       </Router>

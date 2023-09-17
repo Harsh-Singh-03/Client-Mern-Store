@@ -4,7 +4,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import {productsReducer, filterReducer, FilterDataReducer, getQueryReducer, newProductReducer, allReviews, addReviews, deleteReviews, updateReview} from "./Reducrers/productReducers";
 import { AuthDisplay, SignupReducer, UserTokenReducer, SignOutReducer, SigninReducer, AddAddressReducer } from "./Reducrers/UserReducers";
 import { AddToCart, UpdateCart, removeCart, CartDisplay, CartItemsReducers,CheckoutProcess } from "./Reducrers/cartReducer";
-import { createOrderReducre, placedOrderReducre } from "./Reducrers/orderReducer";
+import { createOrderReducre, placedOrderReducre, getCustomerOrders } from "./Reducrers/orderReducer";
 
 const reducer = combineReducers({
     products: productsReducer,
@@ -29,7 +29,8 @@ const reducer = combineReducers({
     CheckoutProcess,
     addUserAddress: AddAddressReducer,
     CreateOrder: createOrderReducre,
-    PlacedOrder: placedOrderReducre
+    PlacedOrder: placedOrderReducre,
+    getCustomerOrders
   });
   
   let initialState = {}

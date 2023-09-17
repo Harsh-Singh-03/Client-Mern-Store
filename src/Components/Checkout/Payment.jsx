@@ -50,7 +50,7 @@ const Payment = () => {
     }
     if(isOrderPlaced === true){
       alert.success(placedMessage)
-      if(orderID) Navigate(`/checkout/thank-you/${orderID}`)
+      if(orderID) Navigate(`/profile/order/${orderID}`)
     }
     // eslint-disable-next-line
   }, [isOrderCreated, isOrderPlaced])

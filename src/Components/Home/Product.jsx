@@ -22,7 +22,7 @@ const responsive = {
 const Product = (props) => {
   return (
     <div className="category-product-dom">
-      <div className="Side_Title_Bar" style={{ minWidth: "230px" }}>
+      <div className="Side_Title_Bar" style={{ minWidth: "230px", display: props.sideDisplay }}>
         <span>{props.category}</span>
         <img src={props.image} alt="" />
         <Link to={props.url}>View All</Link>

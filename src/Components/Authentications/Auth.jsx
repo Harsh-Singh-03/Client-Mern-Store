@@ -5,6 +5,7 @@ import Signup from "./Signup";
 import SideBar from "./SideBar";
 import Login from "./Login";
 import { useState } from "react";
+import Forget from "./Forget";
 
 const Auth = () => {
     const Dispatch = useDispatch()
@@ -24,13 +25,20 @@ const Auth = () => {
                 {pageView === "Sign-In" && (
                     <div className="Auth-Side_form">
                         <Login />
+                        <button className="formal-toogle-button" style={{background: "#2874f0", color: "#fff"}} onClick={()=>toggleView("forget-pass")}>Forget Password?</button>
                         <button className="formal-toogle-button" onClick={()=>toggleView("Sign-Up")}>New User? Sign Up</button>
                     </div>
                 )}
                 {pageView === "Sign-Up" && (
                     <div className="Auth-Side_form" >
                         <Signup />
-                        <button className="formal-toogle-button" onClick={()=>toggleView("Sign-In")}>Have Account?  Log In</button>
+                        <button className="formal-toogle-button"  onClick={()=>toggleView("Sign-In")}>Have Account?  Log In</button>
+                    </div>
+                )}
+                {pageView === "forget-pass" && (
+                    <div className="Auth-Side_form" >
+                        <Forget />
+                        <button className="formal-toogle-button" onClick={()=>toggleView("Sign-In")}>Back To?  Log In</button>
                     </div>
                 )}
             </div>

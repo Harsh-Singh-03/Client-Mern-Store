@@ -31,24 +31,24 @@ const ProductDetail = () => {
     if (isProduct === true && product.data._id === id) {
       let localArr = JSON.parse(localStorage.getItem('recent')) || [];
       if(localArr.length !== 0 && localArr.length <= 8){
-        const idExists = localArr.some(item => item.data._id === id);
+        const idExists = localArr.some(item => item._id === id);
         if(!idExists){
-          localArr.unshift(product)
+          localArr.unshift(product.data)
           localStorage.setItem('recent', JSON.stringify(localArr));
         }else{
           localStorage.setItem('recent', JSON.stringify(localArr));
         }
       }
       else if(localArr.length !== 0 && localArr.length > 8){
-        const idExists = localArr.some(item => item.data._id === id);
+        const idExists = localArr.some(item => item._id === id);
         if(!idExists){
           localArr.pop()
-          localArr.unshift(product)
+          localArr.unshift(product.data)
           localStorage.setItem('recent', JSON.stringify(localArr));
         }
       }
       else{
-        localArr.unshift(product)
+        localArr.unshift(product.data)
         localStorage.setItem('recent', JSON.stringify(localArr));
       }
     }
@@ -75,33 +75,3 @@ const ProductDetail = () => {
 }
 
 export default ProductDetail
-
-
-
-
-
-
-// {clientSecret && (
-//             <Elements options={options} stripe={stripePromise}>
-//               <CheckoutForm />
-//             </Elements>
-//             )}
-
-
-
-            // const StripeInit = (price) => {
-            //   fetch("http://localhost:4000/product/create-payment-intent", {
-            //     method: "POST",
-            //     headers: { "Content-Type": "application/json" },
-            //     body: JSON.stringify({ price }),
-            //   })
-            //     .then((res) => res.json())
-            //     .then((data) => setClientSecret(data.clientSecret));
-            // }
-            // const appearance = {
-            //   theme: 'stripe',
-            // };
-            // const options = {
-            //   clientSecret,
-            //   appearance,
-            // };

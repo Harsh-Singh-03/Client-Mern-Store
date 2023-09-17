@@ -24,14 +24,14 @@ const Home = () => {
       <Carousel />
       {loading === false ? (
         <>
-          <Product category="Top Offers" url="/category/topOffers" productData={products.topOffers} image="/Images/Bg-section.webp" />
-          <Product category="Mobile" url="/category/Mobile" productData={products.Mobile} image="/Images/bg-section1.webp" />
-          <Product category="Fashion" url="/category/Fashion" productData={products.Fashion} image="/Images/Bg-section.webp" />
-          <Product category="Electronics" url="/category/Electronics" productData={products.Electronics} image="/Images/bg-section1.webp" />
-          <Product category="Home" url="/category/Home" productData={products.Home} image="/Images/Bg-section.webp" />
-          <Product category="Appliances" url="/category/Appliances" productData={products.Appliances} image="/Images/bg-section1.webp" />
-          <Product category="Two Wheeler" url="/category/twoWheelers" productData={products.twoWheelers} image="/Images/Bg-section.webp" />
-          <Product category="Grocery" url="/category/Grocery" productData={products.Grocery} image="/Images/bg-section1.webp" />
+          <Product sideDisplay="flex" category="Top Offers" url="/category/topOffers" productData={products.topOffers} image="/Images/Bg-section.webp" />
+          <Product sideDisplay="flex" category="Mobile" url="/category/Mobile" productData={products.Mobile} image="/Images/bg-section1.webp" />
+          <Product sideDisplay="flex" category="Fashion" url="/category/Fashion" productData={products.Fashion} image="/Images/Bg-section.webp" />
+          <Product sideDisplay="flex" category="Electronics" url="/category/Electronics" productData={products.Electronics} image="/Images/bg-section1.webp" />
+          <Product sideDisplay="flex" category="Home" url="/category/Home" productData={products.Home} image="/Images/Bg-section.webp" />
+          <Product sideDisplay="flex" category="Appliances" url="/category/Appliances" productData={products.Appliances} image="/Images/bg-section1.webp" />
+          <Product sideDisplay="flex" category="Two Wheeler" url="/category/twoWheelers" productData={products.twoWheelers} image="/Images/Bg-section.webp" />
+          <Product sideDisplay="flex" category="Grocery" url="/category/Grocery" productData={products.Grocery} image="/Images/bg-section1.webp" />
         </>
       ) : <Homeloader/> }
     </>
