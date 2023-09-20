@@ -37,7 +37,7 @@ const Payment = () => {
 
   const { UserData } = useSelector((state) => state.TokenVerify);
   const { CartData } = useSelector((state) => state.CartItems)
-  const { isOrderCreated, orderID, message } = useSelector((state) => state.CreateOrder);
+  const { isOrderCreated, orderID } = useSelector((state) => state.CreateOrder);
   const { isOrderPlaced, placedMessage } = useSelector((state) => state.PlacedOrder);
 
   const Dispatch = useDispatch()
@@ -45,8 +45,8 @@ const Payment = () => {
   useEffect(() => {
     console.log(isOrderCreated)
     if (isOrderCreated === true) {
-      alert.success(orderID)
-      alert.success(message)
+      // alert.success(orderID)
+      // alert.success(message)
     }
     if(isOrderPlaced === true){
       alert.success(placedMessage)
