@@ -66,7 +66,7 @@ const Search = () => {
           <form onSubmit={redirect} style={{width: "100%"}}>
             <SearchContainer>
                 <InputSearchBase id='dummy'
-                  placeholder="Search for products, brands and more"
+                  placeholder="Search for products, categories and more"
                   inputProps={{ 'aria-label': 'search' }}
                   onChange={handleChange}
                 />
