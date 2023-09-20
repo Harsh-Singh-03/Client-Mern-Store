@@ -52,3 +52,40 @@
 .list-fucn-profile{
     cursor: pointer;
 }
+.search-box{
+    position: relative;
+    width: 38%;
+}
+.search-card{
+    padding: 20px;
+    position: absolute;
+    width: calc(100% - 40px);
+    margin-left: 12px;
+    gap: 16px;
+    /* grid-template-columns: 1fr 1fr; */
+    top: 38px;
+    animation: fadeIn 0.6s ease 1;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0.1;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.cat-list h4{
+   margin-bottom: 10px;
+}
+.cat-list ul {
+    list-style: none;
+}
+.cat-list li{
+    margin: 4px 0px;
+}
+.cat-list a, .cat-list span{
+    color: #808080;
+    font-size: 14px;
+}

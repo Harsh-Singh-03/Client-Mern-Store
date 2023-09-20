@@ -15,17 +15,22 @@ import Profile from './Components/User/Profile';
 import VerifyEmail from './Components/User/VerifyEmail';
 import Reset from './Components/Authentications/Reset';
 import OrderInfo from './Components/User/OrderInfo';
+import { getProducts } from './Actions/productAction';
+import Search from './Components/Listpage/Search';
 
 function App() {
   
   const Dispatch = useDispatch()
+  const {  products } = useSelector((state) => state.products);
   const { isLoggedIn } = useSelector((state) => state.TokenVerify);
   const { CartView } = useSelector((state) => state.CartDisplay);
-  // loading, UserData,
 
   useEffect(() => {
     if (!isLoggedIn) {
       Dispatch(TokenVerify())
+    }
+    if(products.Mobile === undefined){
+      Dispatch(getProducts())
     }
     // eslint-disable-next-line 
   }, [])
@@ -49,6 +54,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category/:name" element={<Mainpage />} />
+            <Route path="/search" element={<Search />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/checkout/:id" element={<Shipping />} />
             <Route path="/checkout/thank-you/:id" element={<Thankyou />} />

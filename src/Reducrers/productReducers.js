@@ -1,6 +1,6 @@
 import { ALL_PRODUCT_FAIL, ALL_PRODUCT_REQUEST,ALL_PRODUCT_SUCCESS,CLEAR_ERRORS, FILTER_PRODUCT_FAIL, FILTER_PRODUCT_REQUEST, FILTER_PRODUCT_SUCCESS, REQUEST_FILTER_DATA, SUCCESS_FILTER_DATA, FAIL_FILTER_DATA, NEW_PRODUCT_REQUEST, NEW_PRODUCT_SUCCESS, NEW_PRODUCT_FAIL} from "../Constants/productConstants";
 
-export const productsReducer = (state = { products: [] }, action) => {
+export const productsReducer = (state = { products: [], loading: true }, action) => {
   switch (action.type) {
     case ALL_PRODUCT_REQUEST:
       return {

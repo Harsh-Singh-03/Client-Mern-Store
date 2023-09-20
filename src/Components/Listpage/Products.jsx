@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { getFilterProducts } from "../../Actions/productAction"
 // import { getFilterProducts } from "../../Actions/productAction"
 
-const Products = () => {
+const Products = (props) => {
   // const Navigate = useNavigate() 
   const Dispatch = useDispatch()
   const [currentPage, setcurrentPage] = useState(1)
@@ -27,7 +27,7 @@ const Products = () => {
   let LoadArr = [1, 2, 3, 4, 5, 6, 7, 8]
   return (
     <div className="product-list-page">
-      <div className="product-list">
+      <div className="product-list" style={{justifyContent: props.align}}>
         {loading === false ? products.products.map((data, index) => {
           return (
             <Link to={`/product/${data._id}`} style={{ textDecoration: "none" }} key={index}>
@@ -61,7 +61,7 @@ const Products = () => {
           )
         })}
       </div>
-      {loading === false ?<Pagination
+      {loading === false && props.page === true ? <Pagination
         count={products.productsCount === undefined ? 1 : Math.ceil(products.productsCount / 8)}
         page={currentPage}
         onChange={(event, page) => HandleChange(event, page)}

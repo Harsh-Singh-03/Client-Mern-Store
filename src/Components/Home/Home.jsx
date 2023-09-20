@@ -2,21 +2,13 @@ import Navbar from "./Navbar"
 import Carousel from "./Carousel"
 import Product from "./Product"
 import './Home.css'
-import { useDispatch, useSelector } from "react-redux"
-import { getProducts } from "../../Actions/productAction"
-import { useEffect } from "react"
+import { useSelector } from "react-redux"
 import Homeloader from "./Homeloader"
 import Nav from '../Header/Nav';
 
 const Home = () => {
-  const Dispatch = useDispatch()
   const { loading, products } = useSelector((state) => state.products);
-  useEffect(() => {
-    if(products.Mobile === undefined){
-      Dispatch(getProducts())
-    }
-    // eslint-disable-next-line
-  }, [])
+
   return (
     <>
       <Nav/>

@@ -11,7 +11,7 @@ const Mainpage = () => {
       <Navbar display="none" padding="10px" />
       <div className="Filter-DOM">
         <Sidebar/>
-        <Products/>
+        <Products align="flex-start" page={true} />
       </div>
     </>
   )
