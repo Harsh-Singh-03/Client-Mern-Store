@@ -10,7 +10,7 @@ import { CircularProgress, Rating } from '@mui/material';
 import DiscountIcon from '@mui/icons-material/Discount';
 import DoneIcon from '@mui/icons-material/Done';
 import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspaceOutlined';
-import FlashOnIcon from '@mui/icons-material/FlashOn';
+// import FlashOnIcon from '@mui/icons-material/FlashOn';
 import CartBottom from './CartBottom';
 
 const Cart = () => {
@@ -158,7 +158,7 @@ const Cart = () => {
                             </div>
                             <DoneIcon onClick={(e) => updateQ1(e, item.productId)} className='doneIcon' style={{ opacity: 0, pointerEvents: isCartCheck === true ? "auto" : "none" }} />
                           </form>
-                          <button className='buy-button-cart'><FlashOnIcon />Buy</button>
+                          {/* <button className='buy-button-cart'><FlashOnIcon />Buy</button> */}
                         </div>
                       </div>
                       {item.offer && <div className='discount-box' onClick={() => setDiscountToggle(discountToggle === index ? -1 : index)}>
